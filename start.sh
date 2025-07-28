@@ -16,6 +16,7 @@ else
     -p "${HOST_PORT}:${CONTAINER_PORT}" \
     -v ollama:/root/.ollama \
     -v open-webui:/app/backend/data \
+    -e OFFLINE_MODE=1 \
     --name "${CONTAINER_NAME}" \
     --restart always \
     ghcr.io/open-webui/open-webui:ollama
